@@ -8,7 +8,7 @@ if (window.rcmail) {
 
 $(document).ready(function($){
 	$('input.button.mainaction').remove();
-	$('.boxcontent').append('<p><input type="button" value="Salvar" id="save_button" class="button mainaction"></p>')
+	$('.boxcontent').append('<p><input type="button" value="Save" id="save_button" class="button mainaction"></p>')
 
 	$('#save_button').click(function(){
 		rcmail.command('plugin.password-save-without-validation','',this);

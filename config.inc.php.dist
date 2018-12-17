@@ -1,0 +1,20 @@
+<?php
+
+/* Roundcube Plugin: forgot_password
+ * Pull these values from your RC installation's config/config.inc.php file
+ */
+
+// admin email (this account will receive alerts when an user does not have an alternative email)
+$config['admin_email'] = "";
+
+// SMTP
+// Examples:
+// $config['default_smtp_server'] = 'tls://your.domain.com';
+// $config['default_smtp_user'] = 'no-reply@your.domain.com';
+// $config['default_smtp_pass'] = 'YOUR_SMTP_USER_PASSWORD';     Note: You should setup file permissions so this file is not accessible to unauthorized users!
+
+$config['default_smtp_server'] = '';
+$config['default_smtp_user'] = '';
+$config['default_smtp_pass'] = '';
+
+?>

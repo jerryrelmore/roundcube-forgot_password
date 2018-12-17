@@ -4,4 +4,4 @@ CREATE TABLE `forgot_password` (
   `token` varchar(40) COLLATE latin1_general_ci DEFAULT NULL,
   `token_expiration` datetime DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

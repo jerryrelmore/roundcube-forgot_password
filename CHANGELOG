@@ -1,0 +1,45 @@
+jerryrelmore/roundcube-forgot_password
+
+Version 1.10:
+ - Added en_US localization files.
+
+ - Fixed localization errors in forgot_password.php caused by use of deprecated RC function syntax.
+
+ - Fixed redirect $link:108 in forgot_password.php (to add alternative email if none is available) for my local installation.
+
+ - Fixed call to forgot_password function in forgot_password.php.
+
+ - Fixed calls to get_table_name to use modern table_name function in forgot_password.php.
+
+ - Fixed calls to get_input_value to use modern get_input_value function in forgot_password.php.
+
+ - Fixed undefined constant RCMAIN_CHARSET to use modern syntax (i.e., 'RCMAIL_CHARSET') in forgot_password.php.
+
+ - Fixed calls to html2text to use modern rcube_html2text function in forgot_password.php.
+
+ - Fixed call to rc_wordwrap to use modern wordwrap function in forgot_password.php.
+
+ - Fixed call to rcmail_overwrite_action to use modern overwrite_action function in forgot_password.php.
+
+ - Fixed syntax calling errors to write_log function in forgot_password.php.
+
+ - Changed language to English in js/change_save_button.js.
+
+ - Removed call to 'taskbar' div in js/forgot_password.js and changed to 'login_form' since 'taskbar' plugin is deprecated and no longer available anywhere.
+
+TODO:
+ - Fix password column error in roundcubedb table.
+
+ - Do away with MD5 and incorporate modern, stronger hashing.
+
+ - Fix CSS styles.
+
+ - Setup better URL encoding. "Variabilize" it for more flexibility.
+
+ - Along same lines, encrypt the encoding for better security.
+
+ - Add more localizations.
+
+ - Add configuration flexibility through a more robust plugin/config.inc.php
+
+ - ...among many others.
