@@ -25,7 +25,8 @@ Version 1.10:
 
  - Changed language to English in js/change_save_button.js.
 
- - Removed call to 'taskbar' div in js/forgot_password.js and changed to 'login_form' since 'taskbar' plugin is deprecated and no longer available anywhere.
+ - Removed call to 'taskbar' div in js/forgot_password.js and changed to 'login_form' since 'taskbar' plugin is deprecated 
+   and no longer available anywhere.
 
 TODO:
  - Fix password column error in roundcubedb table.
