@@ -11,6 +11,6 @@ function forgot_password(){
 
 $(document).ready(function($){
 
-  $('#taskbar').append('<a class="home" id="forgot_password" href="javascript:forgot_password();">' + rcmail.gettext('forgotpassword','forgot_password') + '</a>');
+  $('#login-form').append('<a class="home" id="forgot_password" href="javascript:forgot_password();">' + rcmail.gettext('forgotpassword','forgot_password') + '</a>');
 
 });
