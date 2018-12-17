@@ -41,6 +41,8 @@
 ##### 3.    Compatibility
 ##### 4.    Disclaimers
 
+ -----------------------------------------------------------------------
+
 ###### 1. Dependencies:
   `password` [plugin](https://github.com/roundcube/roundcubemail/tree/master/plugins/password)
 
