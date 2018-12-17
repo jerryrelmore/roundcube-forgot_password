@@ -1,10 +1,15 @@
  -----------------------------------------------------------------------
+
 #### Forgot Password Plugin for Roundcube
+
  -----------------------------------------------------------------------
+
  Plugin that adds functionality so that a user can request a link to 
  generate a new password if the original is lost. Additionally, an
  administrator is able to reset the user's password using this plugin.
+
  -----------------------------------------------------------------------
+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
@@ -19,10 +24,15 @@
  along with this program. If not, see http://www.gnu.org/licenses/.
 
  @author-current: Jerry Elmore <jerry.r.elmore@silverfox.email>
+ 
  @authors-original: Fabio Perrella and Thiago Coutinho (Locaweb)
+
  -----------------------------------------------------------------------
+
  Version 1.10:
+ 
  Date: 17-Dec-2018
+ 
  -----------------------------------------------------------------------
 
 ##### 1.    Dependencies
@@ -33,8 +43,10 @@
 
 ###### 1. Dependencies:
   `password` [plugin](https://github.com/roundcube/roundcubemail/tree/master/plugins/password)
+
   __Note__: `forgot_password` __must__ be placed in in `RC_INSTALL/config/config.inc.php` plugins 
      array __after__ `password`.
+
   `forgot_password` table will need to be created in RC installation's SQL database (e.g., `roundcubedb`).
 
 ###### 1.1 Installation:
@@ -62,8 +74,9 @@ Copy `RC_INSTALL/plugins/forgot_password/config.inc.php.dist` to `RC_INSTALL/plu
 and add the information as indicated within the file. Unfortunately, in the current version your reply account's 
 password will be stored as plain-text so the author assumes you know what needs to happen to secure your own 
 installation against malicious use. ;) 
-* __Hint__: Setup permissions the way you setup permissions for your main RC_INSTALL 
-config.inc.php.*
+
+__Hint__: Setup permissions the way you setup permissions for your main RC_INSTALL 
+config.inc.php.
 
 Search for `$link` variables within `forgot_password.php` and remove `login/` portion of sub-URL and 
 add any that may be necessary to direct the plugin to your RC installation's landing/login page. For example, 
@@ -75,7 +88,7 @@ At this point, and due to the plugin's still extremely alpha state for newer ver
 `tail -f /var/log/syslog` or `tail -f /var/log/messages`, go to your RC installation's login screen, click 
 forgot password link and start the debug/customization for your own installation.
 
-#####2. Notes:
+###### 2. Notes:
 Both the current `latest` and `master` repos are still works in progress. This plugin is functional at this point on 
 the current author's installation, but will need massaging by a competent administrator to work on any other installation. 
 The current author hopes to get the plugin to a more mature/releasable state but it is not high on the priority list. 
