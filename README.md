@@ -50,6 +50,7 @@
      array __after__ `password`.
 
   `forgot_password` table will need to be created in RC installation's SQL database (e.g., `roundcubedb`).
+  See `SQL/forgot_password.sql` for the query to do so.
 
 ###### 1.1 Installation:
 Clone the repo to your `RC_INSTALL/plugins` directory, e.g. 
@@ -57,6 +58,9 @@ Clone the repo to your `RC_INSTALL/plugins` directory, e.g.
 
 Once the repo is cloned, rename the directory from `RC_INSTALL/plugins/roundcube-forgot_password` 
 to `RC_INSTALL/plugins/forgot_password`
+
+Open your SQL database (e.g., `mysql -uroot -p`), switch to your RC db (e.g., `use roundcubedb;`) and run the query
+from `SQL/forgot_password.sql` to create the `forgot_password` table.
 
 Update `RC_INSTALL/config/config.inc.php` and add the following (note that `forgot_password` __must__ 
 come after `password`):
