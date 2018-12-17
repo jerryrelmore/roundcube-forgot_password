@@ -1,4 +1,4 @@
-<h3> -----------------------------------------------------------------------
+ -----------------------------------------------------------------------
  Forgot Password Plugin for Roundcube
  -----------------------------------------------------------------------
  Plugin that adds functionality so that a user can request a link to 
@@ -19,10 +19,10 @@
  along with this program. If not, see http://www.gnu.org/licenses/.
 
  @author-current: Jerry Elmore <jerry.r.elmore@silverfox.email>
- @authors-original: Fabio Perrella and Thiago Coutinho (Locaweb)</h3>
+ @authors-original: Fabio Perrella and Thiago Coutinho (Locaweb)
  -----------------------------------------------------------------------
-<h3> Version 1.10:
- Date: 17-Dec-2018</h3>
+ Version 1.10:
+ Date: 17-Dec-2018
  -----------------------------------------------------------------------
 
  1.    Dependencies
@@ -31,48 +31,48 @@
  3.    Compatibility
  4.    Disclaimers
 
-<b>1. Dependencies:</b>
-  <i>password</i> plugin - https://github.com/roundcube/roundcubemail/tree/master/plugins/password
-  <i><b>Note: forgot_password must be placed in in RC_INSTALL/config/config.inc.php plugins array AFTER password.</b></i>
-  <i>forgot_password</i> table will need to be created in RC installation's SQL database (e.g., <i>roundcubedb</i>).
+1. Dependencies:
+  password plugin - https://github.com/roundcube/roundcubemail/tree/master/plugins/password
+  Note: forgot_password must be placed in in RC_INSTALL/config/config.inc.php plugins array AFTER password.
+  forgot_password table will need to be created in RC installation's SQL database (e.g., roundcubedb).
 
-<b>1.1 Installation:</b>
-Clone the repo to your RC_INSTALL/plugins directory, e.g. <code>git clone git@github.com:jerryrelmore/roundcube-forgot_password.git</code>
+1.1 Installation:
+Clone the repo to your RC_INSTALL/plugins directory, e.g. git clone git@github.com:jerryrelmore/roundcube-forgot_password.git
 
-Once the repo is cloned, rename the directory from <i>RC_INSTALL/plugins/roundcube-forgot_password</i> to <i>RC_INSTALL/plugins/forgot_password</i>
+Once the repo is cloned, rename the directory from RC_INSTALL/plugins/roundcube-forgot_password to RC_INSTALL/plugins/forgot_password
 
-Update <i>RC_INSTALL/config/config.inc.php</i> and add the following (note that <i>forgot_password</i> must come after <i>password</i>:
-<code>  $config['plugins'] = array(
+Update RC_INSTALL/config/config.inc.php and add the following (note that forgot_password must come after password:
+  $config['plugins'] = array(
 		'password',
 		'forgot_password'
   );
-</code>
 
-<b>OPTIONAL:</b> Update <i>RC_INSTALL/plugins/forgot_password/js/forgot_password.js</i> and change the 'login_form' div to another div on your login page.
+
+OPTIONAL: Update RC_INSTALL/plugins/forgot_password/js/forgot_password.js and change the 'login_form' div to another div on your login page.
 
 Setup a no-reply@your.domain.com account from which to send emails containing the reset links.
 
-Copy <i>RC_INSTALL/plugins/forgot_password/config.inc.php.dist</i> to <i>RC_INSTALL/plugins/forgot_password/config.inc.php</i> and add the information as
+Copy RC_INSTALL/plugins/forgot_password/config.inc.php.dist to RC_INSTALL/plugins/forgot_password/config.inc.php and add the information as
 indicated within the file. Unfortunately, in the current version your reply account's password will be stored as plain-text so the author assumes you know 
 what needs to happen to secure your own installation against malicious use. ;) (Hint: Setup permissions the way you setup permissions for your main RC_INSTALL 
 config.inc.php).
 
-Search for <code>$link</code> variables within <i>forgot_password.php</i> and remove <code>login/</code> portion of sub-URL and add any that may be necessary to direct 
-the plugin to your RC installation's landing/login page. For example, if you go to <code>https://your.domain.com</code> to login, then just remove <code>login/</code>. 
-However, if you go to <code>https://your.domain.com/this/is/my/RC/install/login/page</code>, then you will need to replace <code>login/</code> with 
-<code>/this/is/my/RC/install/login/page</code>.
+Search for $link variables within forgot_password.php and remove login/ portion of sub-URL and add any that may be necessary to direct 
+the plugin to your RC installation's landing/login page. For example, if you go to https://your.domain.com to login, then just remove login/. 
+However, if you go to https://your.domain.com/this/is/my/RC/install/login/page, then you will need to replace login/ with 
+/this/is/my/RC/install/login/page.
 
-At this point, and due to the plugin's still <i>extremely</i> alpha state, you need to <code>tail -f /var/log/syslog</code> or <code>tail -f /var/log/messages</code>, 
-go to your RC installation's login screen, click <i>forgot password</i> link and start the debug/customization for your own installation.
+At this point, and due to the plugin's still extremely alpha state, you need to tail -f /var/log/syslog or tail -f /var/log/messages, 
+go to your RC installation's login screen, click forgot password link and start the debug/customization for your own installation.
 
-<b>2. Notes:</b>
+2. Notes:
 Both the current "latest" and master repos are still works in progress. This plugin is functional on the author's installation, but will need massaging by a competent
 administrator to work on any other installation. The current author hopes to get the plugin to a more mature/releasable state but it is not high on the priority list. 
 Feel free to fork as I did and run with it!
 
-<b>3. Compatibility:</b>
+3. Compatibility:
 The current version was tested (and is theoretically compatible with) Roundcube version 1.3.8.
 
-<b>4. Disclaimers:</b>
+4. Disclaimers:
 The current version is a fork of the original, long-unmaintained version at https://github.com/saas-dev/roundcube-forgot_password. It is still definitely 
 "not ready for primetime" and if you use it, you do so at your own risk. Support is not guaranteed but I may be able to provide very limited assistance.
