@@ -1,5 +1,5 @@
  -----------------------------------------------------------------------
-### Forgot Password Plugin for Roundcube
+#### Forgot Password Plugin for Roundcube
  -----------------------------------------------------------------------
  Plugin that adds functionality so that a user can request a link to 
  generate a new password if the original is lost. Additionally, an
@@ -25,19 +25,19 @@
  Date: 17-Dec-2018
  -----------------------------------------------------------------------
 
-#### 1.    Dependencies
-#### 1.1   Installation
-#### 2.    Notes
-#### 3.    Compatibility
-#### 4.    Disclaimers
+##### 1.    Dependencies
+##### 1.1   Installation
+##### 2.    Notes
+##### 3.    Compatibility
+##### 4.    Disclaimers
 
-#####1. Dependencies:
+###### 1. Dependencies:
   `password` [plugin](https://github.com/roundcube/roundcubemail/tree/master/plugins/password)
   __Note__: `forgot_password` __must__ be placed in in `RC_INSTALL/config/config.inc.php` plugins 
      array __after__ `password`.
   `forgot_password` table will need to be created in RC installation's SQL database (e.g., `roundcubedb`).
 
-#####1.1 Installation:
+###### 1.1 Installation:
 Clone the repo to your `RC_INSTALL/plugins` directory, e.g. 
 `git clone git@github.com:jerryrelmore/roundcube-forgot_password.git`
 
@@ -82,10 +82,10 @@ The current author hopes to get the plugin to a more mature/releasable state but
 
 Feel free to fork as I did and run with it!
 
-#####3. Compatibility:
+###### 3. Compatibility:
 The current version was tested (and is theoretically compatible with) Roundcube version 1.3.8.
 
-#####4. Disclaimers:
+###### 4. Disclaimers:
 Version 1.10 is a fork of the original, long-unmaintained version 1.0 [here](https://github.com/saas-dev/roundcube-forgot_password). 
 It is still definitely "not ready for primetime" with newer RC versions and if you use it, you do so at your own risk. 
 
