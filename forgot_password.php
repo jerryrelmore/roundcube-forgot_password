@@ -312,6 +312,7 @@ class forgot_password extends rcube_plugin
 		$headers .= "Date: " . date('r', time()) . "\r\n";
 		$headers .= "From: $from\r\n";
 		$headers .= "To: $to\r\n";
+		$subject = "=?UTF-8?B?".base64_encode($subject)."?=";
 		$headers .= "Subject: $subject\r\n";
 		$headers .= "Reply-To: $from\r\n";
 
