@@ -285,7 +285,7 @@ class forgot_password extends rcube_plugin
 
 	private function send_alert_to_admin($user_requesting_new_password) {
 		$rcmail = rcmail::get_instance();
-		$file = dirname(__FILE__)."/localization/{$rcmail->user->language}/reset_pw_body.html";
+		$file = dirname(__FILE__)."/localization/{$rcmail->user->language}/alert_for_admin_to_reset_pw.html";
 		$body = strtr(file_get_contents($file), array('[USER]' => $user_requesting_new_password));
 		$subject = $rcmail->gettext('admin_alert_email_subject','forgot_password');
 
@@ -312,6 +312,7 @@ class forgot_password extends rcube_plugin
 		$headers .= "Date: " . date('r', time()) . "\r\n";
 		$headers .= "From: $from\r\n";
 		$headers .= "To: $to\r\n";
+		$subject = "=?UTF-8?B?".base64_encode($subject)."?=";
 		$headers .= "Subject: $subject\r\n";
 		$headers .= "Reply-To: $from\r\n";
 
